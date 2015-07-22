@@ -6,4 +6,10 @@
   :dependencies [[org.clojure/clojure "1.6.0"]]
   :main ^:skip-aot clj4brave-ex.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {
+             :dev {
+                   :plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]]
+                   :dependencies [[org.clojure/tools.nrepl "0.2.7"]]
+                   }
+             :uberjar {:aot :all}})
+
